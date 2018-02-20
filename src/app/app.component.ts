@@ -35,8 +35,16 @@ export class AppComponent {
     // this.ordenaTareas();
   }
 
+  removeItem(tarea){
+    let index = this.model.items.findIndex(this.findTarea, tarea.action);
+    console.log(index);
+    if(index > -1) this.model.items.splice(index, 1);
+  }
+
   findTarea(elemento){
     //this, cuando se llama, es igual POR SINTAXIS a event.tarea
+    console.log("This: ", this);
+    console.log("Elemento: ", elemento);
     return elemento.action == this;
   }
   nuevaPrioridad(event){

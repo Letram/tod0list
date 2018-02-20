@@ -47,7 +47,8 @@
         (nuevaPrioridad)="nuevaPrioridad($event)"></app-prioridad>
       </td>
       <td>
-        <button class="btn btn-default">
+        <button class="btn btn-default"
+        (click)="removeItem(item)">
           <span class="glyphicon glyphicon-remove-sign"></span>
         </button>
       </td>
